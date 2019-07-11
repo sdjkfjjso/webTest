@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+
+        }
+        #wrap{
+            background-color: #666666;
+            width: 1160px;
+            height: 480px;
+            /*border: solid 1px black;*/
+            position: relative;
+        }
+        #wrap #bi{
+            width: 190px;
+            height: 480px;
+            background-color: #666666;
+            position: absolute;
+            border: solid 1px black;
+        }
+        #wrap #img{
+            width: 590px;
+            height: 480px;
+            /*border: 1px solid crimson;*/
+            position: absolute;
+            left: 190px;
+        }
+        #wrap #kon{
+            width: 190px;
+            height: 480px;
+            position: absolute;
+            right: 0px;
+        }
+        #wrap #bi ul{
+            height: 468px;
+            width: 190px;
+        }
+        #wrap #bi ul li{
+            height: 26px;
+            line-height: 26px;
+            list-style:none;
+            padding-left: 10px;
+            padding-top: 10px;
+            font-family: 华文行楷;
+            font-size: 18px;
+        }
+        #wrap #bi .a{
+            width: 780px;
+            height: 480px;
+            background-color: #ffffee;
+            position: absolute;
+            left: 190px;
+            top: 0px;
+            z-index: 2;
+            display: none;
+        }
+        #wrap #bi .a ul li:nth-child(1) p{
+            width: 780px;
+            height: 480px;
+            position: absolute;
+            /*border: solid 1px yellow;*/
+            left: 0px;
+            top:0px;
+            background-image: url("img/10.png");
+        }
+        #wrap #img p{
+            width: 590px;
+            height: 480px;
+            position: absolute;
+            border: solid 1px black;
+            left: 0px;
+            top:0px;
+        }
+        #wrap #img p:nth-child(1){
+            background-image: url("img/1.webp");
+        }
+        #wrap #img p:nth-child(2){
+            background-image: url("img/2.webp");
+        }
+        #wrap #img p:nth-child(3){
+            background-image: url("img/3.jpg");
+        }
+        #wrap #img p:nth-child(4){
+            background-image: url("img/125c67bcd392e4ad.jpg!q90!cc_590x470.jpg");
+        }
+        #wrap #img p:nth-child(5){
+            background-image: url("img/a10db22aa6a2b3b2.jpg!q90!cc_590x470.jpg");
+        }
+        #wrap #img p:nth-child(6){
+            background-image: url("img/bd4cbf9c5467228a.jpg!q90!cc_590x470.jpg");
+        }
+        #wrap #img p:nth-child(7){
+            background-image: url("img/e50728e7746010cd.jpg!q90!cc_590x470.webp");
+        }
+        #wrap #img p:nth-child(8){
+            background-image: url("img/f8dce329f7ec3992.jpg!q90!cc_590x470.jpg");
+        }
+        #wrap #img ul{
+            list-style: none;
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+        }
+        #wrap #img ul li{
+            width: 10px;
+            height: 10px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            float: left;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        #wrap #kon p{
+            width: 190px;
+            height: 480px;
+            position: absolute;
+            left: 0px;
+            top:0px;
+            border: solid 1px black;
+            background-image: url("img/4.png");
+        }
+        #wrap #kon1 p{
+            width: 190px;
+            height: 480px;
+            position: absolute;
+            border: solid 1px black;
+            left: 785px;
+            top:0px;
+            background-image: url("img/4.png");
+        }
+
+        .wrap1{
+            width: 1160px;
+            height: 275px;
+            border: solid 1px #000;
+            margin-top: 30px;
+        }
+        .a1{
+            width: 191px;
+            height: 275px;
+            float: left;
+            border-right: solid 2px #dbdbdb;
+            font-family: 华文行楷;
+        }
+        .a1:nth-child(1){
+            background-color: red;
+        }
+        .b4{
+            height: 190px;
+            width: 190px;
+            background-size: 140px 140px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .a1:nth-child(2) .b4{
+            background-image: url("img/0fe8c372b497b5c9.jpg!q90.webp");
+        }
+        .a1:nth-child(3) .b4{
+            background-image: url("img/58b514f9N3f8d45c4.jpg!q90.webp");
+        }
+        .a1:nth-child(4) .b4{
+            background-image: url("img/62e280c46b1f719e.jpg!q90.webp");
+        }
+        .a1:nth-child(5) .b4{
+            background-image: url("img/3542ba64c145c99d.jpg!q90.webp");
+        }
+        .b1{
+            color: white;
+            font-size: 35px;
+            margin-left: 25px;
+            margin-top: 40px;
+        }
+        .b2{
+            color: #666;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .b3{
+            color: #000;
+            height:30px ;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-align: center;
+            line-height: 30px;
+        }
+        .a2{
+            width: 80px;
+            height: 30px;
+            border: solid 1px #ff0000;
+            float:right;
+            text-align: center;
+            margin-top: 8px;
+        }
+        .a2:nth-child(even){
+            background-color: #ff0000;
+            color: #ffffff;
+            font-weight: 800;
+        }
+        .a2:nth-child(odd){
+            color: grey;
+            margin-right: 12px;
+        }
+        .wrap1 .d ul{
+            list-style: none;
+            position: absolute;
+            bottom: 15px;
+            right: 80px;
+        }
+        .wrap1 .d ul li{
+            width: 10px;
+            height: 10px;
+            background-color: grey;
+            border-radius: 50%;
+            float: left;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        .wrap1 .d{
+            position: relative;
+            width: 192px;
+            height: 275px;
+            border-right: solid 2px #dbdbdb;
+            float: left;
+            overflow: hidden;
+        }
+        .wrap1 .d .b4 div{
+            height: 190px;
+            width: 190px;
+            position: absolute;
+            background-repeat: no-repeat;
+           top: 20px;
+        }
+        .d .b4 .a{
+            background-image: url("img/58b514f9N3f8d45c4.jpg!q90.webp");
+        }
+        .d .b4 .b{
+            background-image: url("img/0aea9971ffc9b9ac.jpg!q90!cc_130x130.webp");
+        }
+        @keyframes in1 {
+            from{
+                left: 190px;
+            }
+            to{
+                left: 0px;
+            }
+        }
+        @keyframes out2 {
+            from{
+                left: 0px;
+            }
+            to{
+                left: -190px;
+            }
+        }
+        .wrap1 .d .b4 .a{
+            animation: in1 1s;
+            left: 0px;
+        }
+        .wrap1 .d .b4 .b{
+            animation: out2 1s;
+            left: 190px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="bi">
+        <ul>
+            <li>
+                <span>家用电器</span>
+            </li>
+            <li>
+                <span>手机</span>/
+                <span>运营商</span>/
+                <span>数码</span>
+            </li>
+            <li>
+                <span>电脑</span>/
+                <span>办公</span>
+            </li>
+            <li>
+                <span>家具</span>/
+                <span>家居</span>/
+                <span>家装</span>/
+                <span>厨具</span>
+            </li>
+            <li>
+                <span>男装</span>/
+                <span>女装</span>/
+                <span>童装</span>/
+                <span>内衣</span>
+            </li>
+            <li><span>美妆</span>/
+                <span>个护清洁</span>/
+                <span>宠物</span>
+            </li>
+            <li>
+                <span>女鞋</span>/
+                <span>女鞋</span>/
+                <span>钟表</span>/
+                <span>珠宝</span>
+            </li>
+            <li>
+                <span>男鞋</span>/
+                <span>运动</span>/
+                <span>户外</span>
+            </li>
+            <li>
+                <span>房产</span>/
+                <span>汽车</span>/
+                <span>汽车用品</span>
+
+            </li>
+            <li>
+                <span>母婴</span>/
+                <span>玩具乐器</span>
+            </li>
+            <li>
+                <span>食品</span>/
+                <span>酒类</span>/
+                <span>生鲜</span>/
+                <span>特产</span>
+            </li>
+            <li>
+                <span>工业品</span>
+            </li>
+        </ul>
+        <div class="a">
+            <ul>
+                <li>
+                    <p></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="img">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div id="kon">
+        <p></p>
+    </div>
+    <div id="kon1">
+        <p></p>
+    </div>
+</div>
+
+<div id="qin">
+
+</div>
+<div class="wrap1">
+    <div class="a1">
+        <div class="b1">京东秒杀</div>
+        <div class="b2">FLASH DEALS</div>
+        <div class="b2">无敌的我又迷路了</div>
+    </div>
+    <div class="a1">
+        <div class="b4"></div>
+        <div class="b3">天青色等烟雨</div>
+        <div class="a2">58.00</div>
+        <div class="a2">99.00</div>
+
+    </div>
+    <div class="a1">
+        <div class="b4"></div>
+        <div class="b3">而我在等你</div>
+        <div class="a2">58.00</div>
+        <div class="a2">99.00</div>
+    </div>
+    <div class="a1">
+        <div class="b4"></div>
+        <div class="b3">阳光总在风雨后</div>
+        <div class="a2">58.00</div>
+        <div class="a2">99.00</div>
+    </div>
+    <div class="a1">
+        <div class="b4"></div>
+        <div class="b3">花非花落花</div>
+        <div class="a2">58.00</div>
+        <div class="a2">99.00</div>
+    </div>
+    <div class="d">
+        <div class="b4">
+            <div class="a"></div>
+            <div class="b"></div>
+        </div>
+        <ul>
+            <li><>
+            <li><>
+        </ul>
+    </div>
+</div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+    $(function () {
+        $("#wrap #bi ul li span").mouseenter(function () {
+            $(this).parent().parent().siblings().show();
+        });
+        $("#wrap #bi ul li span").mouseleave(function () {
+            $(this).parent().parent().siblings().hide();
+        })
+
+        $("#wrap #img ul li").mousemove(function () {
+            //获取当前元素的数组下标
+            var index = $(this).index();
+            $("#wrap #img p").eq(index).fadeIn(2000).siblings("p").fadeOut(2000);
+        });
+        var i=0;
+        var a;
+        //定时器自动播放的效果
+        //应用场景 轮播图
+        a = setInterval(function () {
+            i++;
+            if (i>7){
+                i=0;
+            }
+            $("#wrap #img p").eq(i).fadeIn(2000).siblings("p").fadeOut(2000);
+        },3000)
+        $("#wrap #img p").mousemove(function () {
+            clearInterval(a);
+        })
+    });
+
+</script>
+</body>
+</html>
